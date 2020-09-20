@@ -5,7 +5,7 @@ const HomePage = () => {
     return (
         <Fragment className="App">
             <Flex height="100vh" align="center" justify="center">
-                <Box p="20px" backgroundColor="#C3C3C3" rounded="20px">
+                <Box p="20px" backgroundColor={colorMode === "light" ? "#C3C3C3" : "#1a202c "} rounded="20px">
                     <Flex align="center" justify="center" direction="column">
                         <Button position="absolute" top='5' left='5' rounded='50%' onClick={() => toggleColorMode()}>
                             <Icon name={colorMode === "light" ? "moon" : "sun"} />
@@ -17,16 +17,16 @@ const HomePage = () => {
                                     Login
                             </Tab>
                                 <Tab w="50%">
-                                    Register
+                                Register
                             </Tab>
                             </TabList>
                             <TabPanels mt='15px'>
                                 <TabPanel>
                                     <Flex align="center" justify="center" direction='column' mt="10px" >
-                                        login
+                                    Login
                                     <Input placeholder="UserName" size="lg" type="email" />
                                         <Input placeholder="Password" size="lg" type="password" mt="10px" />
-                                        <Button size="lg" backgroundColor="primary" mt="20px" >Login</Button>
+                                        <Button size="lg" mt="20px" variantColor={colorMode === 'light' ? "green" : 'pink'}>Login</Button>
                                     </Flex>
                                 </TabPanel>
                                 <TabPanel mt='15px'>
@@ -36,7 +36,7 @@ const HomePage = () => {
 
                                         <Input placeholder="Password" size="lg" type="password" mt="10px" />
                                         <Input placeholder="Confirm Password" size="lg" type="password" mt="10px" />
-                                        <Button size="lg" backgroundColor="primary" mt="20px" >Register</Button>
+                                        <Button size="lg" mt="20px" variantColor={colorMode === 'light' ? "green" : 'pink'}  >Register</Button>
 
 
                                     </Flex>

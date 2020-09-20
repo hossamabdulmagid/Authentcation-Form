@@ -38,6 +38,7 @@ const HomePage = () => {
                                         <Input placeholder="Confirm Password" size="lg" type="password" mt="10px" />
                                         <Button size="lg" backgroundColor="primary" mt="20px" >Register</Button>
 
+
                                     </Flex>
                                 </TabPanel>
                             </TabPanels>

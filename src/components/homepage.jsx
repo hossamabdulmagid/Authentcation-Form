@@ -1,14 +1,23 @@
 import React, { Fragment } from 'react';
-import { Flex, Box, Text, Tabs, Tab, TabList, TabPanel, TabPanels, Input, Button, useColorMode, Icon } from '@chakra-ui/core';
+import { Flex, Box, Text, Tabs, Tab, TabList, TabPanel, TabPanels, Input, Button, useColorMode, Icon, useToast } from '@chakra-ui/core';
 const HomePage = () => {
     const { colorMode, toggleColorMode } = useColorMode();
+    const toast = useToast();
+
     return (
         <Fragment className="App">
             <Flex height="100vh" align="center" justify="center">
-                <Box p="20px" backgroundColor={colorMode === "light" ? "#C3C3C3" : "#1a202c "} rounded="20px">
+                <Box p="20px" backgroundColor={colorMode === "light" ? "#C3C3C3" : "#1a202c"} rounded="20px">
                     <Flex align="center" justify="center" direction="column">
                         <Button position="absolute" top='5' left='5' rounded='50%' onClick={() => toggleColorMode()}>
-                            <Icon name={colorMode === "light" ? "moon" : "sun"} />
+                            <Icon name={colorMode === "light" ? "moon" : "sun"} onClick={() => toast({
+                                isClosable: false,
+                                title: 'Mood Changing',
+                                description: 'Enjoy with Your Mood',
+                                duration: 5000,
+                                position: 'bottom-right',
+                                status: "warning"
+                            })} />
                         </Button>
                         <Text fontSize="20px" >Authentcation Form</Text>
                         <Tabs mt="20px">
@@ -17,13 +26,13 @@ const HomePage = () => {
                                     Login
                             </Tab>
                                 <Tab w="50%">
-                                Register
+                                    Register
                             </Tab>
                             </TabList>
                             <TabPanels mt='15px'>
                                 <TabPanel>
                                     <Flex align="center" justify="center" direction='column' mt="10px" >
-                                    Login
+                                        Login
                                     <Input placeholder="UserName" size="lg" type="email" />
                                         <Input placeholder="Password" size="lg" type="password" mt="10px" />
                                         <Button size="lg" mt="20px" variantColor={colorMode === 'light' ? "green" : 'pink'}>Login</Button>

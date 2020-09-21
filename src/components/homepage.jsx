@@ -36,7 +36,7 @@ const HomePage = () => {
                             <TabPanels mt='15px'>
                                 <TabPanel>
                                     <Flex align="center" justify="center" direction='column' mt="10px" >
-
+                                    -
                                         <Input placeholder="UserName" size="lg" type="email" />
                                         <Input placeholder="Password" size="lg" type="password" mt="10px" />
                                         <Button size="lg" mt="20px" variantColor={colorMode === 'light' ? "green" : 'pink'}>Login</Button>

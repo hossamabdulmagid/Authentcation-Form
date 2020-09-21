@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Flex, Box, Text, Tabs, Tab, TabList, TabPanel, TabPanels, Input, Button, useColorMode, Icon, useToast } from '@chakra-ui/core';
 import LayOut from './Grid'
+import Modall from './Modal'
 const HomePage = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     const toast = useToast();
@@ -36,7 +37,7 @@ const HomePage = () => {
                             <TabPanels mt='15px'>
                                 <TabPanel>
                                     <Flex align="center" justify="center" direction='column' mt="10px" >
-                                    -
+                                        -
                                         <Input placeholder="UserName" size="lg" type="email" />
                                         <Input placeholder="Password" size="lg" type="password" mt="10px" />
                                         <Button size="lg" mt="20px" variantColor={colorMode === 'light' ? "green" : 'pink'}>Login</Button>
@@ -57,7 +58,10 @@ const HomePage = () => {
                                 </TabPanel>
                             </TabPanels>
                         </Tabs>
+
                     </Flex>
+                    <Modall />
+
                 </Box>
 
             </Flex>

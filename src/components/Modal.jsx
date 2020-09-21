@@ -27,7 +27,7 @@ const Modall = () => {
                         <Button variantColor={colorMode === 'light' ? "green" : 'pink'} mr={3} onClick={onClose} >
                             Close
             </Button>
-                        <Button variantColor={colorMode === 'light' ? "green" : 'pink'} >Secondary Action</Button>
+                        <Button variantColor={colorMode === 'light' ? "green" : 'pink'}  mr={3} onClick={onClose}>Secondary Action</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Flex, Box, Text, Tabs, Tab, TabList, TabPanel, TabPanels, Input, Button, useColorMode, Icon, useToast } from '@chakra-ui/core';
-import LayOut from './Grid'
+import LayOut from './grid'
 import Modall from './Modal'
 const HomePage = () => {
     const { colorMode, toggleColorMode } = useColorMode();
